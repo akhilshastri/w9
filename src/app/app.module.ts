@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './core/nav/nav.component';
 import { DashboardComponent } from './routes/dashboard/dashboard.component';
+import {MyCustomersLibModule} from "my-customers-lib";
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { DashboardComponent } from './routes/dashboard/dashboard.component';
   ],
   imports: [
     BrowserModule,
+    MyCustomersLibModule,
     AppRoutingModule
   ],
   providers: [],
