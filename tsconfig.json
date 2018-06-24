@@ -28,6 +28,18 @@
       ],
       "my-customers-lib/*": [
         "dist/my-customers-lib/*"
+      ],
+      "my-orders-lib": [
+        "dist/my-orders-lib"
+      ],
+      "my-orders-lib/*": [
+        "dist/my-orders-lib/*"
+      ],
+      "my-suppliers-lib": [
+        "dist/my-suppliers-lib"
+      ],
+      "my-suppliers-lib/*": [
+        "dist/my-suppliers-lib/*"
       ]
     }
   }
