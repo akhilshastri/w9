@@ -121,6 +121,86 @@
           }
         }
       }
+    },
+    "my-common-lib": {
+      "root": "projects/my-common-lib",
+      "sourceRoot": "projects/my-common-lib/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/my-common-lib/tsconfig.lib.json",
+            "project": "projects/my-common-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/my-common-lib/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/my-common-lib/src/test.ts",
+            "tsConfig": "projects/my-common-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/my-common-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/my-common-lib/tsconfig.lib.json",
+              "projects/my-common-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "my-customers-lib": {
+      "root": "projects/my-customers-lib",
+      "sourceRoot": "projects/my-customers-lib/src",
+      "projectType": "library",
+      "prefix": "mcust",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/my-customers-lib/tsconfig.lib.json",
+            "project": "projects/my-customers-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/my-customers-lib/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/my-customers-lib/src/test.ts",
+            "tsConfig": "projects/my-customers-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/my-customers-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/my-customers-lib/tsconfig.lib.json",
+              "projects/my-customers-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "my-ordering-app"

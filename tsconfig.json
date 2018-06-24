@@ -15,6 +15,20 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "my-common-lib": [
+        "dist/my-common-lib"
+      ],
+      "my-common-lib/*": [
+        "dist/my-common-lib/*"
+      ],
+      "my-customers-lib": [
+        "dist/my-customers-lib"
+      ],
+      "my-customers-lib/*": [
+        "dist/my-customers-lib/*"
+      ]
+    }
   }
 }
