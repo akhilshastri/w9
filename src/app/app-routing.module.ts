@@ -5,7 +5,7 @@ import {MyCustomersLibComponent} from 'my-customers-lib';
 
 const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
-  {path: 'customers', component: MyCustomersLibComponent},
+  {path: 'customers/:id', component: MyCustomersLibComponent},
   {path: '**', redirectTo: 'dashboard', pathMatch: 'full'}
 ];
 
