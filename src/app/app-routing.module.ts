@@ -3,13 +3,13 @@ import {Routes, RouterModule} from '@angular/router';
 import {DashboardComponent} from './routes/dashboard/dashboard.component';
 import {MyCustomersLibComponent} from 'my-customers-lib';
 
-const routes: Routes = [
+export const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
-  {path: 'customers/:id', component: MyCustomersLibComponent},
+  {path: 'customers', component: MyCustomersLibComponent},
   {path: '**', redirectTo: 'dashboard', pathMatch: 'full'}
 ];
 
-export const routes: Routes = routes ;
+// export const routes: Routes = routes ;
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {useHash: true})],

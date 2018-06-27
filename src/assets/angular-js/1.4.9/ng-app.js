@@ -11,12 +11,12 @@ app.config(['$routeProvider','$locationProvider',function ($rp,$lp) {
       controller:['$scope',function($scope){
           $scope.name='View 1';
       }]
-  }).when('/view2/id',{
+  }).when('/view2',{
     template:'<div> {{$name}} <a href="#view1"> View1 </a> </div>',
       controller:['$scope',function($scope){
           $scope.name='View 2';
       }]
-  })
+  }).otherwise({redirectTo:'/view1'});
 }]) ;
 
 app.run(function(){
